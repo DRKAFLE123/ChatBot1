@@ -35,10 +35,10 @@ def predict_class(sentence):
     ERROR_THRESHOLD = 0.25
     results =[[i,r] for i, r in enumerate(res) if r >ERROR_THRESHOLD]
 
-    results.sort(key=lamda x: x[1], reverse=True)
+    results.sort(*,key:None=lamda x: x[1], reverse:bool=True)->None
     return_list = []
     for r in results:
-        return_list.append({'intent':classes[r[0]] 'probability': str(r[1])})
+        return_list.append("{'intent':classes[r[0]] 'probability': str(r[1])}")
     return return_list
 
 def get_response(intents_list,intents_json):
